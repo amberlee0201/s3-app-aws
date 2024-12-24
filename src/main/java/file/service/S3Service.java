@@ -5,7 +5,6 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -49,7 +48,7 @@ public class S3Service {
         }
 
         // DB 저장
-        String filePath = "/Users/ksj/CloudEngineering/97.data/" + DIR_NAME;
+        String filePath = "/home/ubuntu/" + DIR_NAME;
         String attachmentOriginalFileName = file.getOriginalFilename();
         UUID uuid = UUID.randomUUID();
         String attachmentFileName = uuid + "_" + attachmentOriginalFileName;
